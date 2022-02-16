@@ -70,6 +70,21 @@ endif
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
 SYSTEMEXT_SEPARATE_PARTITION_ENABLE := true
 
+##########
+# QSPA flags start
+##########
+
+#QSPA global flag for modular architecture
+#true means QSPA is enabled for system
+#false means QSPA is disabled for system
+TARGET_USES_QSPA := true
+
+#target specific runtime prop for qspa
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.config.qspa=true
+# QSPA flags end
+
+
 ###########
 #QMAA flags starts
 ###########
