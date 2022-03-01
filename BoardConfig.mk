@@ -175,6 +175,9 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
+# Disable Telephony for neo targets
+TARGET_NO_TELEPHONY := true
+
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
