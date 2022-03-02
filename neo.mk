@@ -79,11 +79,15 @@ SYSTEMEXT_SEPARATE_PARTITION_ENABLE := true
 #false means QSPA is disabled for system
 TARGET_USES_QSPA := true
 
+##QSPA tech team flag to configure QSPA per tech team
+##true means QSPA is enabled for system  for this tech area
+#false means QSPA is disabled for system
+TARGET_USES_QSPA_CONFIG_DISPLAY := false
+
 #target specific runtime prop for qspa
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.config.qspa=true
 # QSPA flags end
-
 
 ###########
 #QMAA flags starts
