@@ -123,7 +123,7 @@ BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API := true
 
-BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000
+BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 printk.devkmsg=on androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3
 BOARD_BOOTCONFIG := androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3
 
 # TARGET_CONSOLE_ENABLED allows to override the default kernel configuration
@@ -131,7 +131,7 @@ BOARD_BOOTCONFIG := androidboot.hardware=qcom androidboot.memcg=1 androidboot.us
 # false -- override kernel configuration to disable console
 # <blank> (default) -- use kernel default configuration
 ifeq ($(TARGET_CONSOLE_ENABLED),true)
-BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon msm_geni_serial.con_enabled=1
+BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon msm_geni_serial.con_enabled=1 androidboot.console=ttyMSM0
 BOARD_BOOTCONFIG += androidboot.console=ttyMSM0
 else
 ifeq ($(TARGET_CONSOLE_ENABLED),false)
