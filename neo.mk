@@ -535,7 +535,7 @@ PRODUCT_VENDOR_PROPERTIES += graphics.gpu.profiler.support=true
 
 ##############################Go configs###########################################
 
-#TARGET_HAS_LOW_RAM := true
+TARGET_HAS_LOW_RAM := true
 
 # Enable DM file preopting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
