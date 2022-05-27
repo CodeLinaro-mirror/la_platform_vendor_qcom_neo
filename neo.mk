@@ -82,7 +82,7 @@ TARGET_USES_QSPA := true
 ##QSPA tech team flag to configure QSPA per tech team
 ##true means QSPA is enabled for system  for this tech area
 #false means QSPA is disabled for system
-TARGET_USES_QSPA_CONFIG_DISPLAY := false
+TARGET_USES_QSPA_CONFIG_DISPLAY := true
 
 #target specific runtime prop for qspa
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -108,7 +108,7 @@ TARGET_USES_QMAA_RECOMMENDED_BOOT_CONFIG := false
 #true means overriding global QMAA for this tech area
 #false means using global, no override
 TARGET_USES_QMAA_OVERRIDE_RPMB := true
-TARGET_USES_QMAA_OVERRIDE_DISPLAY := false
+TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
 TARGET_USES_QMAA_OVERRIDE_AUDIO   := true
 TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
@@ -535,7 +535,7 @@ PRODUCT_VENDOR_PROPERTIES += graphics.gpu.profiler.support=true
 
 ##############################Go configs###########################################
 
-#TARGET_HAS_LOW_RAM := true
+TARGET_HAS_LOW_RAM := true
 
 # Enable DM file preopting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
