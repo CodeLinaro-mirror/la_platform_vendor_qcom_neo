@@ -83,6 +83,7 @@ TARGET_USES_QSPA := true
 ##true means QSPA is enabled for system  for this tech area
 #false means QSPA is disabled for system
 TARGET_USES_QSPA_CONFIG_DISPLAY := true
+TARGET_USES_QSPA_CONFIG_SOTER := false
 
 #target specific runtime prop for qspa
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -143,7 +144,6 @@ TARGET_USES_QMAA_OVERRIDE_PERF := true
 TARGET_USES_QMAA_OVERRIDE_SENSORS := true
 TARGET_USES_QMAA_OVERRIDE_SYNX := true
 TARGET_USES_QMAA_OVERRIDE_SECUREMSM_TESTS := true
-TARGET_USES_QMAA_OVERRIDE_SOTER := true
 TARGET_USES_QMAA_OVERRIDE_REMOTE_EFS := true
 TARGET_USES_QMAA_OVERRIDE_TFTP := true
 TARGET_USES_QMAA_OVERRIDE_EID := true
@@ -501,7 +501,7 @@ PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += telephony-ext
 
-PRODUCT_ENABLE_QESDK := true
+PRODUCT_ENABLE_QESDK := false
 
 # Vendor property to enable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
