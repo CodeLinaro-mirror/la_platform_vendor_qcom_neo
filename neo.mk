@@ -7,8 +7,6 @@ BUILD_BROKEN_DUP_RULES := true
 
 RELAX_USES_LIBRARY_CHECK := true
 
-TARGET_BOOTLOADER_DISPLAY_DISABLE := true
-
 # Default Android A/B configuration
 ENABLE_AB ?= true
 
