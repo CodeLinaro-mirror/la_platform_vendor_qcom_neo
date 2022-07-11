@@ -7,6 +7,8 @@ BUILD_BROKEN_DUP_RULES := true
 
 RELAX_USES_LIBRARY_CHECK := true
 
+TARGET_BOOTLOADER_DISPLAY_DISABLE := true
+
 # Default Android A/B configuration
 ENABLE_AB ?= true
 
@@ -199,7 +201,7 @@ PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += fastbootd
 # Add default implementation of fastboot HAL.
-PRODUCT_PACKAGES += android.hardware.fastboot@1.0-impl-mock
+PRODUCT_PACKAGES += android.hardware.fastboot@1.1-impl-mock
 
 ifeq ($(ENABLE_AB),true)
 ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
