@@ -532,10 +532,8 @@ PRODUCT_VENDOR_PROPERTIES+= \
 # GPU Profiler support
 PRODUCT_VENDOR_PROPERTIES += graphics.gpu.profiler.support=true
 
-# Disable QSEECom feature
-TARGET_QSEECOM_DISABLED := true
-# Disable SMCInvoke feature
-TARGET_SMCINVOKE_DISABLED := true
+# Enable Smcinvoke based System Listeners
+TARGET_ENABLE_SMCI_SYSLISTENER := true
 
 ##############################Go configs###########################################
 
