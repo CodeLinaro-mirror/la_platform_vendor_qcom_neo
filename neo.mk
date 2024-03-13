@@ -148,6 +148,20 @@ TARGET_USES_QMAA_OVERRIDE_REMOTE_EFS := true
 TARGET_USES_QMAA_OVERRIDE_TFTP := true
 TARGET_USES_QMAA_OVERRIDE_EID := true
 
+# Flag to enable Hibernate
+TARGET_SUPPORTS_S2D := true
+
+POWER_STATE_MODULES += powerstatetest-hibernate
+
+#POWER_STATE_MODULES
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateservice@1.0
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateservice@1.0-service
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateservice@1.0-service.rc
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateutility@1.0
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateutility@1.0-service
+POWER_STATE_MODULES += powerstateutility.rc
+
+
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
 
