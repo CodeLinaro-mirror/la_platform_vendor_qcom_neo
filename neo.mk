@@ -154,6 +154,21 @@ TARGET_USES_QMAA_OVERRIDE_EID := true
 # Flag to enable Hibernate
 TARGET_SUPPORTS_S2D := true
 
+ifeq ($(TARGET_SUPPORTS_S2D),true)
+POWER_STATE_MODULES += powerstatetest-hibernate
+endif
+
+#POWER_STATE_MODULES
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateservice@1.0
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateservice@1.0-service
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateservice@1.0-service.rc
+POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateutility@1.0-service
+POWER_STATE_MODULES += powerstateutility.rc
+
+ifneq (, $(filter true, $(TARGET_SUPPORTS_DS) $(TARGET_SUPPORTS_S2D)))
+	PRODUCT_PACKAGES += $(POWER_STATE_MODULES)
+endif
+
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
 
