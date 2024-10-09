@@ -67,9 +67,6 @@ else
 BOARD_ABL_SIMPLE := true
 endif
 
-# Add power state services
-PRODUCT_PACKAGES += vendor.qti.hardware.power.powerstateservice@1.0-service vendor.qti.hardware.power.powerstateutility@1.0-service powerstatetest-hibernate
-
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
 SYSTEMEXT_SEPARATE_PARTITION_ENABLE := true
 
@@ -150,9 +147,6 @@ TARGET_USES_QMAA_OVERRIDE_SECUREMSM_TESTS := true
 TARGET_USES_QMAA_OVERRIDE_REMOTE_EFS := true
 TARGET_USES_QMAA_OVERRIDE_TFTP := true
 TARGET_USES_QMAA_OVERRIDE_EID := true
-
-# Flag to enable Hibernate
-TARGET_SUPPORTS_S2D := true
 
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
