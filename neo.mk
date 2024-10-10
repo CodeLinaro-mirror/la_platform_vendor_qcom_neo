@@ -161,6 +161,7 @@ POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateutility@1.0
 POWER_STATE_MODULES += vendor.qti.hardware.power.powerstateutility@1.0-service
 POWER_STATE_MODULES += powerstateutility.rc
 
+PRODUCT_PACKAGES += $(POWER_STATE_MODULES)
 
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
